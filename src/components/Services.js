@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { FaLaptop, FaChrome, FaMobileAlt } from 'react-icons/fa';
+import { polygon } from '../helper.js';
 
 class Services extends Component {
 	constructor(props) {
@@ -15,10 +16,28 @@ class Services extends Component {
 	}
 
 	componentDidUpdate() {
-		const { windowHeight, windowWidth } = this.props;
-		const tempH = windowHeight;
-		const tempW = windowWidth;
-		// this.drawTriangle(windowWidth, windowHeight);
+		const ctx = this.canvas.current.getContext('2d');
+		const w = ctx.canvas.width;
+		const h = ctx.canvas.height;
+		setInterval(() => {
+			ctx.clearRect(0, 0, w, h);
+			const diamond = Math.floor(Math.random() * 50);
+			for (let i = 0; i <= diamond; i += 1) {
+				const yy = Math.floor(Math.random() * h);
+				const xx = Math.floor(Math.random() * w);
+				const width = Math.floor(Math.random() * 100);
+				const red = Math.floor(Math.random() * 255);
+				const blue = Math.floor(Math.random() * 255);
+				const green = Math.floor(Math.random() * 255);
+				const opacity =				polygon({
+					canvas: ctx,
+					x: xx,
+					y: yy,
+					width,
+					color: `rgba(${red}, ${blue}, ${green}, .05)`,
+				});
+			}
+		}, 240);
 	}
 
 	drawTriangle(width, height) {

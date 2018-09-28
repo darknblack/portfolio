@@ -22,7 +22,7 @@ class About extends Component {
 							</p>
 							<p>Back then, I only know CSS and HTML so I started branching out my skills by learning Javascript. It was kind of challenging at first but got the hang of it eventually and is now my favorite programming language.
 							</p>
-							<p>It was two years ago when I started working as a freelance at <a href="http://fiverr.com">Fiverr.com</a>. Doing projects for various person suddenly become part of my everyday life.
+							<p>It was two years ago when I started working as a freelance at <a href="http://fiverr.com">Fiverr.com</a>. Doing projects for various people suddenly become part of my everyday life.
 							</p>
 						</div>
 						<div className="col-5">
