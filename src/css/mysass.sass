@@ -1,0 +1,110 @@
+$xs-min: "only screen and (min-width: none)"
+$xs-max: "only screen and (max-width: 520px)"
+$xs-sm: "only screen (min-width: none) and (max-width: 767px)"
+
+$sm-min: "only screen and (min-width: 768px)"
+$sm-max: "only screen and (max-width: 991px)"
+$sm-md: "only screen (min-width: 768px) and (max-width: 991px)"
+
+$md-min: "only screen and (min-width: 992px)"
+$md-max: "only screen and (max-width: 1199px)"
+$md-lg: "only screen (min-width: 992px) and (max-width: 1199px)"
+
+$lg-min: "only screen and (min-width: 1200px)"
+$lg-max: "only screen and (max-width: none)"
+// EXAMPLE USE:  	@media #{$sm-min}
+
+$color-1: #f58b0a
+$color-2: #0a7ddc
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false)
+	@if $inset
+		-webkit-box-shadow: inset $top $left $blur $color
+		-moz-box-shadow: inset $top $left $blur $color
+		box-shadow: inset $top $left $blur $color
+	@else
+		-webkit-box-shadow: $top $left $blur $color
+		-moz-box-shadow: $top $left $blur $color
+		box-shadow: $top $left $blur $color
+@mixin border-radius($radius: 0.5em)
+	-webkit-border-radius: $radius
+	-moz-border-radius: $radius
+	border-radius: $radius
+@mixin ellipsis()
+	overflow: hidden
+	white-space: nowrap
+	text-overflow: ellipsis
+@mixin word-wrap()
+	-ms-word-break: break-all
+	word-break: break-all
+	word-break: break-word
+	-webkit-hyphens: auto
+	-moz-hyphens: auto
+	hyphens: auto
+@mixin x($name)
+	@extend .#{$name} !optional
+// +x("foo")
+
+.wrp-xs
+	padding: 10px 0
+.wrp
+	padding: 20px 0
+.wrp-sm
+	padding: 20px 0
+.wrp-md
+	padding: 30px 0
+.wrp-lg
+	padding: 40px 0
+.wrp-xlg
+	padding: 60px 0
+.wrp-bg,
+.wrp-bg-fixed
+	background-position: center center !important
+	background-repeat: no-repeat !important
+	background-size: cover !important
+.wrp-bg-fixed
+	background-attachment: fixed !important
+.wrp-1
+	background: #edeff2
+.wrp-2
+	background: #39c051
+.wrp-3
+	background: #ffd260
+.wrp-4
+	background: #2a2d33
+.wrp-5
+	background: #1289c8
+.wrp-6
+	background: #48bfe8
+
+.mg0
+	margin: 0
+.mgb10
+	margin-bottom: 10px
+.mgb20
+	margin-bottom: 20px
+.pd0
+	padding: 0
+.pdb0
+	padding-bottom: 0
+.color-0
+	color: #fff
+.color-1
+	color: $color-1
+.color-2
+	color: $color-2
+.text-center
+	text-align: center
+.text-left
+	text-align: left
+.text-right
+	text-align: right
+.text-uppercase
+	transform: uppercase
+.text-bold
+	font-weight: bold
+.image-center
+	display: block
+	margin: 0 auto
+.clear
+	clear: both
