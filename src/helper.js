@@ -38,3 +38,29 @@ export const polygon = (obj) => {
 	// ctx.stroke();
 	ctx.setTransform(1, 0, 0, 1, 0, 0);
 };
+
+export const drawRandomPolygon = (ctx) => {
+	const w = ctx.canvas.width;
+	const h = ctx.canvas.height;
+	// need to clear interval;
+	setInterval(() => {
+		ctx.clearRect(0, 0, w, h);
+		const diamond = Math.floor(Math.random() * 50);
+		for (let i = 0; i <= diamond; i += 1) {
+			const yy = Math.floor(Math.random() * h);
+			const xx = Math.floor(Math.random() * w);
+			const width = Math.floor(Math.random() * 100);
+			const red = Math.floor(Math.random() * 255);
+			const blue = Math.floor(Math.random() * 255);
+			const green = Math.floor(Math.random() * 255);
+
+			polygon({
+				canvas: ctx,
+				x: xx,
+				y: yy,
+				width,
+				color: `rgba(${red}, ${blue}, ${green}, .07)`,
+			});
+		}
+	}, 200);
+};

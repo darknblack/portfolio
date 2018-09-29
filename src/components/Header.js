@@ -23,11 +23,11 @@ class Header extends Component {
 
 		// Filled triangle
 		ctx.beginPath();
-		ctx.moveTo(w, w); // // ctx.moveTo(0, 0);
+		ctx.moveTo(w, 0);
 		ctx.lineTo(0, h);
-		ctx.lineTo(w, 0);
-		ctx.fillStyle = 'rgba(255,255,255, .05)';
+		ctx.lineTo(w, h);
 		// ctx.fillStyle = 'red';
+		ctx.fillStyle = 'rgba(255,255,255, .05)';
 		ctx.fill();
 	}
 

@@ -25,13 +25,7 @@ class Body extends Component {
 		window.addEventListener('load', () => WINDOW_RESIZE(getWindowWidth(), getWindowHeight()));
 		window.addEventListener('resize', () => WINDOW_RESIZE(getWindowWidth(), getWindowHeight()));
 		window.addEventListener('scroll', () => WINDOW_SCROLL(getScrollPosition()));
-	}
-
-	componentDidUpdate(prevProps, prevState) {
-		const { WINDOW_SCROLL, WINDOW_RESIZE } = this.props;
-		window.addEventListener('load', () => WINDOW_RESIZE(getWindowWidth(), getWindowHeight()));
-		window.addEventListener('resize', () => WINDOW_RESIZE(getWindowWidth(), getWindowHeight()));
-		window.addEventListener('scroll', () => WINDOW_SCROLL(getScrollPosition()));
+		// document.getElementById('app').style.width = `${getWindowWidth()}px`;
 	}
 
 	componentWillUnmount() {

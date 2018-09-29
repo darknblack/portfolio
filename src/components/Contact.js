@@ -12,7 +12,7 @@ class Client extends Component {
 		const style = { background: '#050505', color: '#fff' };
 
 		return (
-			<div id="contact" className="wrp-xlg" style={style}>
+			<div id="contact" className="wrp-lg" style={style}>
 				<div className="container">
 					<div className="row justify-content-center">
 						<div className="col-md-auto">
@@ -21,8 +21,8 @@ class Client extends Component {
 					</div>
 					<div className="row justify-content-center">
 						<div className="col-8 text-center">
-							<p>Email me at <a href="mailto:ianoderon@gmail.com" target="_top">ianoderon@gmail.com</a></p>
-							<br /><br />
+							<p>You can reach me at <a href="mailto:ianoderon@gmail.com" target="_top">ianoderon@gmail.com</a></p>
+							<br />
 						</div>
 					</div>
 					<div className="row justify-content-center text-center">
